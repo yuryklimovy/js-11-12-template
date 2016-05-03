@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
@@ -8,32 +9,49 @@
   <script src="js/script.js" charset="utf-8"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <div class="main">
 
   </div>
   <script type="text/tmpl" id="tmpl">
     <h1><%= name %></h1>
-    <img src="<%= foto %>" alt=""/>
+    <img src="<%= foto %>" alt="" />
     <div class="about">
-      <p><%= position %></p>
+      <p>
+        <%= position %>
+      </p>
+    </div>
+    <div class="about">
+    <ul>Хочу учить фронтенд потому что:
+      <% for ( var i = 0; i < reason.length; i++ ) { %>
+          <li>
+              <%=reason[i]%>
+          </li>
+      <% } %>
+    </ul>
     </div>
     <div class="contact">
-			<div class="phone">
-				<p>Мой контактный телефон</p>
-				<p><%= number %></p>
-			</div>
-			<div class="vk">
-				<p>Мой профиль в контакте</p>
-				<p><a href="<%= vk %>" target="_blank">vk.com</a></p>
-			</div>
-		</div>
+      <div class="phone">
+        <p>Мой контактный телефон</p>
+        <p>
+          <%= number %>
+        </p>
+      </div>
+      <div class="vk">
+        <p>Мой профиль в контакте</p>
+        <p><a href="<%= vk %>" target="_blank">vk.com</a></p>
+      </div>
+    </div>
     <div class="footter">
-			<div>
-				<p>Мой фидбек:</p>
-				<p><%= fidback %></p>
-			</div>
-		</div>
+      <div>
+        <p>Мой фидбек:</p>
+        <p>
+          <%= fidback %>
+        </p>
+      </div>
+    </div>
   </script>
 </body>
+
 </html>
